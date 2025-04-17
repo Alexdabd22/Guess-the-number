@@ -5,12 +5,12 @@
   "main": "backend/index.js",
   "scripts": {
     "start": "node backend/index.js",
-    "license-report": "license-checker --json > license-report.md"
+    "license-report": "echo Frontend Dependencies: > license-report.md && echo ===================== >> license-report.md && npx license-checker --production --summary >> license-report.md && echo. >> license-report.md && echo Backend Dependencies: >> license-report.md && echo ==================== >> license-report.md && npx license-checker --dev --summary >> license-report.md"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "cors": "^2.8.5"
+    "express-session": "^1.17.3"
   },
   "devDependencies": {
     "license-checker": "^25.0.1"
