@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <body>
+<div id="connectionStatus" class="connection-status"></div>
 <h1>Гра «Вгадай число»</h1>
 <div id="game">
     <button id="start">Почати гру</button>
     <div id="controls" style="display:none">
-        <input type="number" id="guessInput" placeholder="Введіть число (1-100)" />
+        <input type="number" id="guessInput" placeholder="Введіть число (1-100)" min="1" max="100" />
         <button id="guessBtn">Спробувати</button>
         <p id="feedback"></p>
         <button id="restart">Скинути гру</button>
@@ -20,9 +21,9 @@
 </div>
 <h2>Історія останніх 10 ігор:</h2>
 <ul id="gameHistory"></ul>
-
+<div id="progress" style="width: 0%; height: 5px; background: #3498db; margin: 1rem auto; border-radius: 5px;"></div>
+<audio id="winSound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
 <script src="main.js"></script>
 <script src="cookie-popup.js"></script>
 </body>
 </html>
-
