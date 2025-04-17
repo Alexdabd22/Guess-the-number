@@ -35,12 +35,12 @@ guess-the-number/
 - Frontend: HTML, CSS, Vanilla JavaScript
 - Backend: Node.js, Express
 - Session: express-session
-- Cookie Consent: CookieConsent by Osano
+- CookieConsent by Osano (for GDPR compliance)
 ## 📜 License
 
-This project is licensed under the [ISC License](LICENSE.md).
+This project is licensed under the ISC License.
 
-Dependencies license report: [license-report.md](license-report.md)
+For more details on licenses for dependencies, refer to the license-report.md.
 
  ### 1. Clone the project
 ```bash
