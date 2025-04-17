@@ -36,6 +36,11 @@ guess-the-number/
 - Backend: Node.js, Express
 - Session: express-session
 - Cookie Consent: CookieConsent by Osano
+## 📜 License
+
+This project is licensed under the [ISC License](LICENSE.md).
+
+Dependencies license report: [license-report.md](license-report.md)
 
  ### 1. Clone the project
 ```bash
