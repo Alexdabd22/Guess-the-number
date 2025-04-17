@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const  app =express();
 const PORT = 3000;
+const path = require("path");
 
 app.use(cors({
     origin: "http://localhost:5500",
@@ -53,6 +54,12 @@ app.post("/game/restart", (req, res) => {
     req.session.secretNumber = null;
     req.session.guessCount = 0;
     res.json({ message: "Гру скинуто. Натисніть 'Почати гру'." });
+});
+
+app.use(express.static(path.join(__dirname, "../public")));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 app.listen(PORT, () => console.log(`Сервер працює на http://localhost:${PORT}`));
