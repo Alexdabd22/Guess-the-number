@@ -1,9 +1,22 @@
+/**
+ * @file Серверна частина гри "Вгадай число"
+ * @module GuessTheNumberServer
+ * @version 1.0.0
+ * @requires express
+ * @requires express-session
+ * @requires cors
+ */
 const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
 
 const  app =express();
 const PORT = 3000;
+/**
+ * Ініціалізація middleware
+ * @name useMiddleware
+ * @function
+ */
 const path = require("path");
 
 app.use(cors({
@@ -11,13 +24,26 @@ app.use(cors({
     credentials: true
 }));
 app.use(express.json());
+/**
+ * Налаштування сесії
+ * @name useSession
+ * @function
+ * @param {Object} config - Конфігурація сесії
+ */
 app.use(session({
     secret: "secret-key",
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 600000 }
 }));
-
+/**
+ * Маршрут для початку нової гри
+ * @name POST/game/start
+ * @function
+ * @param {Object} req - Об'єкт запиту
+ * @param {Object} res - Об'єкт відповіді
+ * @returns {Object} JSON з повідомленням
+ */
 app.post("/game/start", (req, res) => {
     const number = Math.floor(Math.random() * 100) + 1;
     req.session.secretNumber = number;
