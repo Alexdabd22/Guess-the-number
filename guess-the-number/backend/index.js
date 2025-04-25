@@ -5,20 +5,27 @@
  * @requires express
  * @requires express-session
  * @requires cors
+ * @requires swagger-ui-express
+ * @requires yamljs
  */
 const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
 
-const  app =express();
+const path = require("path");
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
+
+const swaggerDocument = YAML.load(path.join(__dirname, "../swagger.yaml"));
+
+const app = express();
 const PORT = 3000;
 /**
  * Ініціалізація middleware
  * @name useMiddleware
  * @function
  */
-const path = require("path");
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(cors({
     origin: "http://localhost:5500",
     credentials: true
