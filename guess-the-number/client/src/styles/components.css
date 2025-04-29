@@ -1,0 +1,53 @@
+.game-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.game-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.game-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.game-button.restart-button {
+    background: #e74c3c;
+}
+
+.game-button.restart-button:hover {
+    background: #c0392b;
+}
+
+.feedback-message {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    min-height: 2rem;
+    padding: 12px;
+    border-radius: 4px;
+    color: #000000;
+}
+
+.feedback-message.success {
+    background-color: #2ecc71;
+    animation: celebrate 0.5s ease;
+}
+
+.feedback-message.error {
+    background-color: #e74c3c;
+}
+
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
