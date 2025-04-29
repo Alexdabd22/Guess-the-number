@@ -1,6 +1,27 @@
 # Guess-the-number — Web Game
 A simple web game where users try to guess a randomly generated number between 1 and 100. The game uses session-based state management on the backend, stores game history and best score on the client side, and includes a GDPR-compliant cookie consent popup.
+## 📁 Project Structure
 
+```
+guess-the-number/
+├── backend/               
+│   └── index.js
+├── client/                
+│   └── ...
+├── docs/                  
+│   └── index.html/
+├── public/                 
+│   ├── index.html
+│   ├── styles.css
+│   ├── main.js
+│   └── cookie-popup.js
+├── swagger.yaml            
+├── LICENSE                 
+├── license-report.md      
+├── README.md               
+├── package.json
+└── package-lock.json
+```
 ## 🚀 Features
 
 - Start a new game with a random number between 1–100
@@ -11,25 +32,7 @@ A simple web game where users try to guess a randomly generated number between 1
   - Last 10 games history
 - Cookie consent popup compliant with GDPR
 - Session management with Express
-- Frontend & backend separated
-
-## 📁 Project Structure
-guess-the-number/
-├── backend/               
-│   ├── index.js           
-├── docs/           
-│
-├── public/            
-│   ├── index.html         
-│   ├── styles.css       
-│   ├── main.js            
-│   ├── cookie-popup.js   
-│
-├── storybook/        
-│     
-├── package.json           
-├── package-lock.json                 
-├── licenses-report.md               
+- Frontend & backend separated           
 
 ##  Technologies Used
 - Frontend: HTML, CSS, Vanilla JavaScript, Storybook (React)
@@ -46,8 +49,9 @@ For more details on licenses for dependencies, refer to the license-report.md.
 ```bash
 https://github.com/Alexdabd22/Guess-the-number.git
 cd guess-the-number
+npm install
 ```
-### 2. Access the application:
+### 2. Running the Application
 ```bash
 1. npm start
    game: http://localhost:3000
@@ -59,4 +63,5 @@ cd guess-the-number
    npm run storybook
    storybook : http://localhost:6006
 ```
-
+## 👤 Author
+- **Олександр** - [GitHub](https://github.com/Alexdabd22)
