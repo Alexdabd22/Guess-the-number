@@ -32,7 +32,7 @@ guess-the-number/
 ├── licenses-report.md               
 
 ##  Technologies Used
-- Frontend: HTML, CSS, Vanilla JavaScript
+- Frontend: HTML, CSS, Vanilla JavaScript, Storybook (React)
 - Backend: Node.js, Express
 - Session: express-session
 - CookieConsent by Osano (for GDPR compliance)
@@ -44,4 +44,19 @@ For more details on licenses for dependencies, refer to the license-report.md.
 
  ### 1. Clone the project
 ```bash
+https://github.com/Alexdabd22/Guess-the-number.git
+cd guess-the-number
+```
+### 2. Access the application:
+```bash
+1. npm start
+   game: http://localhost:3000
+2. npm start
+   swagger:  http://localhost:3000/api-docs
+3. npx serve docs
+   documentation : http://localhost:3000
+4. cd client
+   npm run storybook
+   storybook : http://localhost:6006
+```
 
